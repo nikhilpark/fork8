@@ -1,0 +1,3 @@
+export const profile = { name: 'Nikhil', height: 178, weight: 74.2, age: 29, sex: 'male', diet: 'eggetarian', goal: 'lose', targets: { kcal: 2180, protein: 134, carbs: 245, fat: 72 } }
+export const seedMeals = [{ type: 'Breakfast', items: [{ name: 'Oats', qty: 1, unit: 'serving', kcal: 152, protein: 5, carbs: 27, fat: 3 }] }, { type: 'Lunch', items: [{ name: 'Dal', qty: 1, unit: 'katori', kcal: 180, protein: 10, carbs: 28, fat: 3 }, { name: 'Cooked rice', qty: 1, unit: 'bowl', kcal: 195, protein: 4, carbs: 42, fat: 0 }] }]
+export const history = Array.from({ length: 30 }, (_, i) => ({ day: i + 1, kcal: 1800 + (i * 37) % 520, target: 2180, protein: 92 + (i * 13) % 55, weight: +(75.8 - i * .055).toFixed(1) }))
