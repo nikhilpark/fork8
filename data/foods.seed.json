@@ -1,0 +1,2796 @@
+[
+  {
+    "name": "Roti (wheat, plain)",
+    "source": "custom",
+    "kcal100": 300,
+    "protein100": 9.5,
+    "carbs100": 56,
+    "fat100": 3.7,
+    "fiber100": 4.5,
+    "micros": {
+      "iron_mg": 3.5,
+      "calcium_mg": 30,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 230,
+      "magnesium_mg": 80,
+      "zinc_mg": 1.8
+    },
+    "aliases": [
+      "roti",
+      "rotis",
+      "chapati",
+      "chapatis",
+      "phulka",
+      "fulka"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 40
+      }
+    ]
+  },
+  {
+    "name": "Roti with ghee",
+    "source": "custom",
+    "kcal100": 350,
+    "protein100": 9,
+    "carbs100": 50,
+    "fat100": 11.5,
+    "fiber100": 4,
+    "micros": {
+      "iron_mg": 3.3,
+      "calcium_mg": 28,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 215,
+      "magnesium_mg": 75,
+      "zinc_mg": 1.7
+    },
+    "aliases": [
+      "roti with ghee",
+      "ghee roti",
+      "buttered roti"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 45
+      }
+    ]
+  },
+  {
+    "name": "Paratha (plain)",
+    "source": "custom",
+    "kcal100": 326,
+    "protein100": 7.5,
+    "carbs100": 45,
+    "fat100": 13,
+    "fiber100": 3,
+    "micros": {
+      "iron_mg": 2.5,
+      "calcium_mg": 25,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 150,
+      "magnesium_mg": 45,
+      "zinc_mg": 1.1
+    },
+    "aliases": [
+      "paratha",
+      "plain paratha",
+      "parantha"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 80
+      }
+    ]
+  },
+  {
+    "name": "Aloo paratha",
+    "source": "custom",
+    "kcal100": 270,
+    "protein100": 5.5,
+    "carbs100": 38,
+    "fat100": 10.5,
+    "fiber100": 3,
+    "micros": {
+      "iron_mg": 1.8,
+      "calcium_mg": 20,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 260,
+      "magnesium_mg": 35,
+      "zinc_mg": 0.9
+    },
+    "aliases": [
+      "aloo paratha",
+      "potato paratha"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "name": "Naan",
+    "source": "custom",
+    "kcal100": 290,
+    "protein100": 9,
+    "carbs100": 50,
+    "fat100": 5,
+    "fiber100": 2,
+    "micros": {
+      "iron_mg": 2.2,
+      "calcium_mg": 60,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 120,
+      "magnesium_mg": 25,
+      "zinc_mg": 0.9
+    },
+    "aliases": [
+      "naan",
+      "butter naan",
+      "plain naan"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 90
+      }
+    ]
+  },
+  {
+    "name": "White rice (cooked)",
+    "source": "custom",
+    "kcal100": 130,
+    "protein100": 2.7,
+    "carbs100": 28,
+    "fat100": 0.3,
+    "fiber100": 0.4,
+    "micros": {
+      "iron_mg": 0.2,
+      "calcium_mg": 10,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 35,
+      "magnesium_mg": 12,
+      "zinc_mg": 0.5
+    },
+    "aliases": [
+      "rice",
+      "white rice",
+      "steamed rice",
+      "boiled rice",
+      "chawal"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      },
+      {
+        "unit": "cup",
+        "grams": 160
+      },
+      {
+        "unit": "plate",
+        "grams": 250
+      }
+    ]
+  },
+  {
+    "name": "Brown rice (cooked)",
+    "source": "custom",
+    "kcal100": 123,
+    "protein100": 2.7,
+    "carbs100": 25.6,
+    "fat100": 1,
+    "fiber100": 1.8,
+    "micros": {
+      "iron_mg": 0.6,
+      "calcium_mg": 3,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 86,
+      "magnesium_mg": 39,
+      "zinc_mg": 0.7
+    },
+    "aliases": [
+      "brown rice"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      },
+      {
+        "unit": "cup",
+        "grams": 195
+      }
+    ]
+  },
+  {
+    "name": "Veg pulao",
+    "source": "custom",
+    "kcal100": 150,
+    "protein100": 3,
+    "carbs100": 25,
+    "fat100": 4.2,
+    "fiber100": 1.5,
+    "micros": {
+      "iron_mg": 0.8,
+      "calcium_mg": 20,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 90,
+      "magnesium_mg": 25,
+      "zinc_mg": 0.6
+    },
+    "aliases": [
+      "pulao",
+      "veg pulao",
+      "vegetable pulao",
+      "jeera rice"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      },
+      {
+        "unit": "plate",
+        "grams": 250
+      }
+    ]
+  },
+  {
+    "name": "Poha",
+    "source": "custom",
+    "kcal100": 130,
+    "protein100": 2.5,
+    "carbs100": 22,
+    "fat100": 3.5,
+    "fiber100": 1.5,
+    "micros": {
+      "iron_mg": 2.5,
+      "calcium_mg": 12,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 90,
+      "magnesium_mg": 20,
+      "zinc_mg": 0.5
+    },
+    "aliases": [
+      "poha",
+      "pohe"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      },
+      {
+        "unit": "plate",
+        "grams": 200
+      }
+    ]
+  },
+  {
+    "name": "Upma",
+    "source": "custom",
+    "kcal100": 130,
+    "protein100": 3,
+    "carbs100": 20,
+    "fat100": 4,
+    "fiber100": 1.5,
+    "micros": {
+      "iron_mg": 1.0,
+      "calcium_mg": 15,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 70,
+      "magnesium_mg": 20,
+      "zinc_mg": 0.5
+    },
+    "aliases": [
+      "upma",
+      "rava upma",
+      "suji upma"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      },
+      {
+        "unit": "plate",
+        "grams": 200
+      }
+    ]
+  },
+  {
+    "name": "Idli",
+    "source": "custom",
+    "kcal100": 146,
+    "protein100": 4.5,
+    "carbs100": 29,
+    "fat100": 0.7,
+    "fiber100": 1,
+    "micros": {
+      "iron_mg": 0.6,
+      "calcium_mg": 10,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 60,
+      "magnesium_mg": 15,
+      "zinc_mg": 0.5
+    },
+    "aliases": [
+      "idli",
+      "idlis"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 40
+      }
+    ]
+  },
+  {
+    "name": "Plain dosa",
+    "source": "custom",
+    "kcal100": 168,
+    "protein100": 3.9,
+    "carbs100": 29,
+    "fat100": 3.7,
+    "fiber100": 1,
+    "micros": {
+      "iron_mg": 0.8,
+      "calcium_mg": 15,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 70,
+      "magnesium_mg": 18,
+      "zinc_mg": 0.4
+    },
+    "aliases": [
+      "dosa",
+      "plain dosa",
+      "dosas"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 80
+      }
+    ]
+  },
+  {
+    "name": "Masala dosa",
+    "source": "custom",
+    "kcal100": 175,
+    "protein100": 3.8,
+    "carbs100": 26,
+    "fat100": 6.5,
+    "fiber100": 1.8,
+    "micros": {
+      "iron_mg": 1.0,
+      "calcium_mg": 20,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 180,
+      "magnesium_mg": 22,
+      "zinc_mg": 0.5
+    },
+    "aliases": [
+      "masala dosa"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Oats (rolled, dry)",
+    "source": "custom",
+    "kcal100": 379,
+    "protein100": 13.2,
+    "carbs100": 67.7,
+    "fat100": 6.5,
+    "fiber100": 10.1,
+    "micros": {
+      "iron_mg": 4.3,
+      "calcium_mg": 52,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 362,
+      "magnesium_mg": 138,
+      "zinc_mg": 3.6
+    },
+    "aliases": [
+      "oats",
+      "rolled oats",
+      "dry oats",
+      "oatmeal dry"
+    ],
+    "portions": [
+      {
+        "unit": "tbsp",
+        "grams": 7
+      },
+      {
+        "unit": "katori",
+        "grams": 40
+      },
+      {
+        "unit": "cup",
+        "grams": 80
+      }
+    ]
+  },
+  {
+    "name": "Oatmeal (cooked in water)",
+    "source": "custom",
+    "kcal100": 71,
+    "protein100": 2.5,
+    "carbs100": 12,
+    "fat100": 1.5,
+    "fiber100": 1.7,
+    "micros": {
+      "iron_mg": 0.9,
+      "calcium_mg": 9,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 70,
+      "magnesium_mg": 27,
+      "zinc_mg": 1.0
+    },
+    "aliases": [
+      "cooked oats",
+      "oatmeal",
+      "porridge",
+      "oats porridge"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      },
+      {
+        "unit": "cup",
+        "grams": 240
+      }
+    ]
+  },
+  {
+    "name": "Bread (white)",
+    "source": "custom",
+    "kcal100": 265,
+    "protein100": 9,
+    "carbs100": 49,
+    "fat100": 3.2,
+    "fiber100": 2.7,
+    "micros": {
+      "iron_mg": 3.6,
+      "calcium_mg": 144,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 115,
+      "magnesium_mg": 25,
+      "zinc_mg": 0.8
+    },
+    "aliases": [
+      "bread",
+      "white bread",
+      "bread slice",
+      "bread slices"
+    ],
+    "portions": [
+      {
+        "unit": "slice",
+        "grams": 27
+      }
+    ]
+  },
+  {
+    "name": "Bread (brown / whole wheat)",
+    "source": "custom",
+    "kcal100": 247,
+    "protein100": 13,
+    "carbs100": 41,
+    "fat100": 3.4,
+    "fiber100": 7,
+    "micros": {
+      "iron_mg": 2.5,
+      "calcium_mg": 100,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 250,
+      "magnesium_mg": 75,
+      "zinc_mg": 1.8
+    },
+    "aliases": [
+      "brown bread",
+      "whole wheat bread",
+      "wheat bread",
+      "multigrain bread"
+    ],
+    "portions": [
+      {
+        "unit": "slice",
+        "grams": 28
+      }
+    ]
+  },
+  {
+    "name": "Cornflakes",
+    "source": "custom",
+    "kcal100": 357,
+    "protein100": 7.5,
+    "carbs100": 84,
+    "fat100": 0.4,
+    "fiber100": 3,
+    "micros": {
+      "iron_mg": 8,
+      "calcium_mg": 5,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 100,
+      "magnesium_mg": 12,
+      "zinc_mg": 0.5
+    },
+    "aliases": [
+      "cornflakes",
+      "corn flakes"
+    ],
+    "portions": [
+      {
+        "unit": "cup",
+        "grams": 28
+      },
+      {
+        "unit": "katori",
+        "grams": 30
+      }
+    ]
+  },
+  {
+    "name": "Besan chilla",
+    "source": "custom",
+    "kcal100": 200,
+    "protein100": 9,
+    "carbs100": 24,
+    "fat100": 8,
+    "fiber100": 4,
+    "micros": {
+      "iron_mg": 2.5,
+      "calcium_mg": 40,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 250,
+      "magnesium_mg": 50,
+      "zinc_mg": 1.4
+    },
+    "aliases": [
+      "besan chilla",
+      "besan cheela",
+      "chilla",
+      "cheela"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 70
+      }
+    ]
+  },
+  {
+    "name": "Pasta (cooked)",
+    "source": "custom",
+    "kcal100": 158,
+    "protein100": 5.8,
+    "carbs100": 31,
+    "fat100": 0.9,
+    "fiber100": 1.8,
+    "micros": {
+      "iron_mg": 1.3,
+      "calcium_mg": 7,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 44,
+      "magnesium_mg": 18,
+      "zinc_mg": 0.5
+    },
+    "aliases": [
+      "pasta",
+      "cooked pasta",
+      "spaghetti",
+      "macaroni"
+    ],
+    "portions": [
+      {
+        "unit": "cup",
+        "grams": 140
+      },
+      {
+        "unit": "plate",
+        "grams": 200
+      }
+    ]
+  },
+  {
+    "name": "Dal (toor, tadka)",
+    "source": "custom",
+    "kcal100": 105,
+    "protein100": 5.5,
+    "carbs100": 14,
+    "fat100": 3,
+    "fiber100": 3,
+    "micros": {
+      "iron_mg": 1.6,
+      "calcium_mg": 25,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 230,
+      "magnesium_mg": 35,
+      "zinc_mg": 0.9
+    },
+    "aliases": [
+      "dal",
+      "daal",
+      "toor dal",
+      "arhar dal",
+      "dal tadka",
+      "dal fry"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      },
+      {
+        "unit": "cup",
+        "grams": 200
+      }
+    ]
+  },
+  {
+    "name": "Moong dal (cooked)",
+    "source": "custom",
+    "kcal100": 105,
+    "protein100": 7,
+    "carbs100": 18,
+    "fat100": 0.5,
+    "fiber100": 5,
+    "micros": {
+      "iron_mg": 1.4,
+      "calcium_mg": 27,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 266,
+      "magnesium_mg": 48,
+      "zinc_mg": 0.8
+    },
+    "aliases": [
+      "moong dal",
+      "mung dal",
+      "yellow dal",
+      "moong daal"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      },
+      {
+        "unit": "cup",
+        "grams": 200
+      }
+    ]
+  },
+  {
+    "name": "Masoor dal (cooked)",
+    "source": "custom",
+    "kcal100": 116,
+    "protein100": 9,
+    "carbs100": 20,
+    "fat100": 0.4,
+    "fiber100": 7.9,
+    "micros": {
+      "iron_mg": 3.3,
+      "calcium_mg": 19,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 369,
+      "magnesium_mg": 36,
+      "zinc_mg": 1.3
+    },
+    "aliases": [
+      "masoor dal",
+      "red lentils",
+      "lal dal",
+      "red dal"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      },
+      {
+        "unit": "cup",
+        "grams": 200
+      }
+    ]
+  },
+  {
+    "name": "Rajma curry",
+    "source": "custom",
+    "kcal100": 120,
+    "protein100": 5.5,
+    "carbs100": 15,
+    "fat100": 4,
+    "fiber100": 4.5,
+    "micros": {
+      "iron_mg": 1.8,
+      "calcium_mg": 35,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 310,
+      "magnesium_mg": 35,
+      "zinc_mg": 0.9
+    },
+    "aliases": [
+      "rajma",
+      "rajma curry",
+      "kidney beans",
+      "rajma masala"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Chole (chickpea curry)",
+    "source": "custom",
+    "kcal100": 150,
+    "protein100": 6,
+    "carbs100": 19,
+    "fat100": 5.5,
+    "fiber100": 5,
+    "micros": {
+      "iron_mg": 2.0,
+      "calcium_mg": 40,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 290,
+      "magnesium_mg": 35,
+      "zinc_mg": 1.0
+    },
+    "aliases": [
+      "chole",
+      "chhole",
+      "chana masala",
+      "chickpea curry",
+      "chole masala"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Sambar",
+    "source": "custom",
+    "kcal100": 60,
+    "protein100": 3,
+    "carbs100": 8,
+    "fat100": 1.8,
+    "fiber100": 2,
+    "micros": {
+      "iron_mg": 1.0,
+      "calcium_mg": 30,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 200,
+      "magnesium_mg": 25,
+      "zinc_mg": 0.5
+    },
+    "aliases": [
+      "sambar",
+      "sambhar"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      },
+      {
+        "unit": "cup",
+        "grams": 240
+      }
+    ]
+  },
+  {
+    "name": "Moong sprouts",
+    "source": "custom",
+    "kcal100": 30,
+    "protein100": 3,
+    "carbs100": 5.9,
+    "fat100": 0.2,
+    "fiber100": 1.8,
+    "micros": {
+      "iron_mg": 0.9,
+      "calcium_mg": 13,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 149,
+      "magnesium_mg": 21,
+      "zinc_mg": 0.4
+    },
+    "aliases": [
+      "sprouts",
+      "moong sprouts",
+      "sprouts salad"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 100
+      },
+      {
+        "unit": "cup",
+        "grams": 104
+      }
+    ]
+  },
+  {
+    "name": "Soya chunks (dry)",
+    "source": "custom",
+    "kcal100": 345,
+    "protein100": 52,
+    "carbs100": 33,
+    "fat100": 0.5,
+    "fiber100": 13,
+    "micros": {
+      "iron_mg": 20,
+      "calcium_mg": 350,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 1700,
+      "magnesium_mg": 280,
+      "zinc_mg": 4
+    },
+    "aliases": [
+      "soya chunks",
+      "soy chunks",
+      "dry soya chunks",
+      "nutrela",
+      "meal maker"
+    ],
+    "portions": [
+      {
+        "unit": "handful",
+        "grams": 30
+      },
+      {
+        "unit": "katori",
+        "grams": 40
+      }
+    ]
+  },
+  {
+    "name": "Tofu (firm)",
+    "source": "custom",
+    "kcal100": 76,
+    "protein100": 8,
+    "carbs100": 1.9,
+    "fat100": 4.8,
+    "fiber100": 0.3,
+    "micros": {
+      "iron_mg": 1.5,
+      "calcium_mg": 350,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 120,
+      "magnesium_mg": 30,
+      "zinc_mg": 0.8
+    },
+    "aliases": [
+      "tofu",
+      "bean curd"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 100
+      },
+      {
+        "unit": "piece",
+        "grams": 40
+      }
+    ]
+  },
+  {
+    "name": "Egg, whole (boiled)",
+    "source": "custom",
+    "kcal100": 155,
+    "protein100": 12.6,
+    "carbs100": 1.1,
+    "fat100": 10.6,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 1.2,
+      "calcium_mg": 50,
+      "vitamin_b12_mcg": 1.1,
+      "vitamin_d_mcg": 2.2,
+      "potassium_mg": 126,
+      "magnesium_mg": 10,
+      "zinc_mg": 1.1
+    },
+    "aliases": [
+      "egg",
+      "eggs",
+      "boiled egg",
+      "boiled eggs",
+      "whole egg",
+      "whole eggs",
+      "egg whole",
+      "anda"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 50
+      }
+    ]
+  },
+  {
+    "name": "Egg white (boiled)",
+    "source": "custom",
+    "kcal100": 52,
+    "protein100": 10.9,
+    "carbs100": 0.7,
+    "fat100": 0.2,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 0.1,
+      "calcium_mg": 7,
+      "vitamin_b12_mcg": 0.1,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 163,
+      "magnesium_mg": 11,
+      "zinc_mg": 0.0
+    },
+    "aliases": [
+      "egg white",
+      "egg whites",
+      "boiled egg white",
+      "boiled egg whites",
+      "egg white only",
+      "egg whites only"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 33
+      }
+    ]
+  },
+  {
+    "name": "Omelette",
+    "source": "custom",
+    "kcal100": 154,
+    "protein100": 10.6,
+    "carbs100": 0.6,
+    "fat100": 11.7,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 1.4,
+      "calcium_mg": 50,
+      "vitamin_b12_mcg": 1.0,
+      "vitamin_d_mcg": 2.0,
+      "potassium_mg": 125,
+      "magnesium_mg": 10,
+      "zinc_mg": 1.0
+    },
+    "aliases": [
+      "omelette",
+      "omelet",
+      "egg omelette",
+      "fried egg"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 65
+      }
+    ]
+  },
+  {
+    "name": "Egg bhurji",
+    "source": "custom",
+    "kcal100": 166,
+    "protein100": 10.5,
+    "carbs100": 2.5,
+    "fat100": 12.5,
+    "fiber100": 0.3,
+    "micros": {
+      "iron_mg": 1.3,
+      "calcium_mg": 50,
+      "vitamin_b12_mcg": 1.0,
+      "vitamin_d_mcg": 1.9,
+      "potassium_mg": 160,
+      "magnesium_mg": 12,
+      "zinc_mg": 1.0
+    },
+    "aliases": [
+      "egg bhurji",
+      "anda bhurji",
+      "scrambled eggs",
+      "scrambled egg"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 100
+      },
+      {
+        "unit": "plate",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Egg curry",
+    "source": "custom",
+    "kcal100": 130,
+    "protein100": 7.5,
+    "carbs100": 4,
+    "fat100": 9,
+    "fiber100": 0.8,
+    "micros": {
+      "iron_mg": 1.0,
+      "calcium_mg": 40,
+      "vitamin_b12_mcg": 0.6,
+      "vitamin_d_mcg": 1.1,
+      "potassium_mg": 150,
+      "magnesium_mg": 12,
+      "zinc_mg": 0.7
+    },
+    "aliases": [
+      "egg curry",
+      "anda curry"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Milk (toned)",
+    "source": "custom",
+    "kcal100": 58,
+    "protein100": 3.1,
+    "carbs100": 4.8,
+    "fat100": 3.0,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 0.0,
+      "calcium_mg": 120,
+      "vitamin_b12_mcg": 0.4,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 150,
+      "magnesium_mg": 11,
+      "zinc_mg": 0.4
+    },
+    "aliases": [
+      "milk",
+      "toned milk",
+      "doodh",
+      "cow milk"
+    ],
+    "portions": [
+      {
+        "unit": "glass",
+        "grams": 245
+      },
+      {
+        "unit": "cup",
+        "grams": 245
+      },
+      {
+        "unit": "katori",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Milk (full cream)",
+    "source": "custom",
+    "kcal100": 66,
+    "protein100": 3.2,
+    "carbs100": 4.8,
+    "fat100": 3.7,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 0.0,
+      "calcium_mg": 113,
+      "vitamin_b12_mcg": 0.5,
+      "vitamin_d_mcg": 1.3,
+      "potassium_mg": 132,
+      "magnesium_mg": 10,
+      "zinc_mg": 0.4
+    },
+    "aliases": [
+      "full cream milk",
+      "whole milk",
+      "full fat milk"
+    ],
+    "portions": [
+      {
+        "unit": "glass",
+        "grams": 245
+      },
+      {
+        "unit": "cup",
+        "grams": 245
+      },
+      {
+        "unit": "katori",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Curd / dahi",
+    "source": "custom",
+    "kcal100": 60,
+    "protein100": 3.1,
+    "carbs100": 3.0,
+    "fat100": 4.0,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 0.1,
+      "calcium_mg": 120,
+      "vitamin_b12_mcg": 0.4,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 155,
+      "magnesium_mg": 12,
+      "zinc_mg": 0.5
+    },
+    "aliases": [
+      "curd",
+      "dahi",
+      "yogurt",
+      "yoghurt",
+      "plain curd"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      },
+      {
+        "unit": "cup",
+        "grams": 245
+      },
+      {
+        "unit": "tbsp",
+        "grams": 15
+      }
+    ]
+  },
+  {
+    "name": "Greek yogurt (low-fat)",
+    "source": "custom",
+    "kcal100": 73,
+    "protein100": 10,
+    "carbs100": 3.9,
+    "fat100": 1.9,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 0.1,
+      "calcium_mg": 110,
+      "vitamin_b12_mcg": 0.5,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 141,
+      "magnesium_mg": 11,
+      "zinc_mg": 0.5
+    },
+    "aliases": [
+      "greek yogurt",
+      "greek yoghurt"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      },
+      {
+        "unit": "cup",
+        "grams": 245
+      }
+    ]
+  },
+  {
+    "name": "Paneer",
+    "source": "custom",
+    "kcal100": 265,
+    "protein100": 18.3,
+    "carbs100": 1.2,
+    "fat100": 20.8,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 0.2,
+      "calcium_mg": 208,
+      "vitamin_b12_mcg": 0.3,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 100,
+      "magnesium_mg": 10,
+      "zinc_mg": 1.5
+    },
+    "aliases": [
+      "paneer",
+      "cottage cheese",
+      "paneer cubes"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 20
+      },
+      {
+        "unit": "katori",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "name": "Chaas (buttermilk)",
+    "source": "custom",
+    "kcal100": 30,
+    "protein100": 1.7,
+    "carbs100": 2.5,
+    "fat100": 1.5,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 0.0,
+      "calcium_mg": 60,
+      "vitamin_b12_mcg": 0.2,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 80,
+      "magnesium_mg": 6,
+      "zinc_mg": 0.2
+    },
+    "aliases": [
+      "chaas",
+      "buttermilk",
+      "chhas",
+      "mattha"
+    ],
+    "portions": [
+      {
+        "unit": "glass",
+        "grams": 250
+      }
+    ]
+  },
+  {
+    "name": "Sweet lassi",
+    "source": "custom",
+    "kcal100": 90,
+    "protein100": 2.8,
+    "carbs100": 14,
+    "fat100": 2.8,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 0.0,
+      "calcium_mg": 90,
+      "vitamin_b12_mcg": 0.3,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 120,
+      "magnesium_mg": 9,
+      "zinc_mg": 0.4
+    },
+    "aliases": [
+      "lassi",
+      "sweet lassi"
+    ],
+    "portions": [
+      {
+        "unit": "glass",
+        "grams": 250
+      }
+    ]
+  },
+  {
+    "name": "Cheese slice",
+    "source": "custom",
+    "kcal100": 300,
+    "protein100": 15,
+    "carbs100": 6,
+    "fat100": 24,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 0.3,
+      "calcium_mg": 500,
+      "vitamin_b12_mcg": 1.0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 100,
+      "magnesium_mg": 20,
+      "zinc_mg": 2.0
+    },
+    "aliases": [
+      "cheese slice",
+      "cheese slices",
+      "processed cheese",
+      "cheese"
+    ],
+    "portions": [
+      {
+        "unit": "slice",
+        "grams": 20
+      }
+    ]
+  },
+  {
+    "name": "Ghee",
+    "source": "custom",
+    "kcal100": 900,
+    "protein100": 0,
+    "carbs100": 0,
+    "fat100": 100,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 0,
+      "calcium_mg": 4,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 5,
+      "magnesium_mg": 0,
+      "zinc_mg": 0
+    },
+    "aliases": [
+      "ghee"
+    ],
+    "portions": [
+      {
+        "unit": "tsp",
+        "grams": 5
+      },
+      {
+        "unit": "tbsp",
+        "grams": 14
+      }
+    ]
+  },
+  {
+    "name": "Butter",
+    "source": "custom",
+    "kcal100": 717,
+    "protein100": 0.9,
+    "carbs100": 0.1,
+    "fat100": 81,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 0,
+      "calcium_mg": 24,
+      "vitamin_b12_mcg": 0.2,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 24,
+      "magnesium_mg": 2,
+      "zinc_mg": 0.1
+    },
+    "aliases": [
+      "butter"
+    ],
+    "portions": [
+      {
+        "unit": "tsp",
+        "grams": 5
+      },
+      {
+        "unit": "tbsp",
+        "grams": 14
+      }
+    ]
+  },
+  {
+    "name": "Cooking oil",
+    "source": "custom",
+    "kcal100": 884,
+    "protein100": 0,
+    "carbs100": 0,
+    "fat100": 100,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 0,
+      "calcium_mg": 0,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 0,
+      "magnesium_mg": 0,
+      "zinc_mg": 0
+    },
+    "aliases": [
+      "oil",
+      "cooking oil",
+      "vegetable oil",
+      "mustard oil",
+      "olive oil"
+    ],
+    "portions": [
+      {
+        "unit": "tsp",
+        "grams": 4.5
+      },
+      {
+        "unit": "tbsp",
+        "grams": 13.5
+      }
+    ]
+  },
+  {
+    "name": "Whey protein powder",
+    "source": "custom",
+    "kcal100": 400,
+    "protein100": 80,
+    "carbs100": 8,
+    "fat100": 6,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 1.5,
+      "calcium_mg": 400,
+      "vitamin_b12_mcg": 1.0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 600,
+      "magnesium_mg": 50,
+      "zinc_mg": 3.0
+    },
+    "aliases": [
+      "whey",
+      "whey protein",
+      "protein powder",
+      "protein shake",
+      "protein scoop"
+    ],
+    "portions": [
+      {
+        "unit": "scoop",
+        "grams": 30
+      }
+    ]
+  },
+  {
+    "name": "Chicken breast (cooked)",
+    "source": "custom",
+    "kcal100": 165,
+    "protein100": 31,
+    "carbs100": 0,
+    "fat100": 3.6,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 1.0,
+      "calcium_mg": 15,
+      "vitamin_b12_mcg": 0.3,
+      "vitamin_d_mcg": 0.1,
+      "potassium_mg": 256,
+      "magnesium_mg": 29,
+      "zinc_mg": 1.0
+    },
+    "aliases": [
+      "chicken breast",
+      "grilled chicken",
+      "boiled chicken",
+      "chicken"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 120
+      },
+      {
+        "unit": "katori",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "name": "Chicken curry",
+    "source": "custom",
+    "kcal100": 140,
+    "protein100": 13,
+    "carbs100": 4,
+    "fat100": 8,
+    "fiber100": 0.5,
+    "micros": {
+      "iron_mg": 1.0,
+      "calcium_mg": 25,
+      "vitamin_b12_mcg": 0.3,
+      "vitamin_d_mcg": 0.1,
+      "potassium_mg": 210,
+      "magnesium_mg": 20,
+      "zinc_mg": 1.3
+    },
+    "aliases": [
+      "chicken curry",
+      "chicken gravy"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Tandoori chicken",
+    "source": "custom",
+    "kcal100": 165,
+    "protein100": 24,
+    "carbs100": 2,
+    "fat100": 6.5,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 1.3,
+      "calcium_mg": 20,
+      "vitamin_b12_mcg": 0.4,
+      "vitamin_d_mcg": 0.1,
+      "potassium_mg": 230,
+      "magnesium_mg": 24,
+      "zinc_mg": 1.8
+    },
+    "aliases": [
+      "tandoori chicken",
+      "chicken tikka"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "name": "Fish curry (rohu)",
+    "source": "custom",
+    "kcal100": 110,
+    "protein100": 11,
+    "carbs100": 3,
+    "fat100": 6,
+    "fiber100": 0.3,
+    "micros": {
+      "iron_mg": 1.0,
+      "calcium_mg": 50,
+      "vitamin_b12_mcg": 2.0,
+      "vitamin_d_mcg": 2.0,
+      "potassium_mg": 280,
+      "magnesium_mg": 28,
+      "zinc_mg": 0.8
+    },
+    "aliases": [
+      "fish curry",
+      "rohu curry",
+      "machli curry"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Fish, grilled / baked",
+    "source": "custom",
+    "kcal100": 128,
+    "protein100": 26,
+    "carbs100": 0,
+    "fat100": 2.7,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 0.7,
+      "calcium_mg": 14,
+      "vitamin_b12_mcg": 1.9,
+      "vitamin_d_mcg": 3.1,
+      "potassium_mg": 380,
+      "magnesium_mg": 34,
+      "zinc_mg": 0.4
+    },
+    "aliases": [
+      "fish",
+      "grilled fish",
+      "baked fish",
+      "fish fillet",
+      "tilapia"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 120
+      }
+    ]
+  },
+  {
+    "name": "Prawns (cooked)",
+    "source": "custom",
+    "kcal100": 99,
+    "protein100": 24,
+    "carbs100": 0.2,
+    "fat100": 0.3,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 0.5,
+      "calcium_mg": 70,
+      "vitamin_b12_mcg": 1.2,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 259,
+      "magnesium_mg": 35,
+      "zinc_mg": 1.6
+    },
+    "aliases": [
+      "prawns",
+      "shrimp",
+      "jhinga"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 100
+      },
+      {
+        "unit": "piece",
+        "grams": 12
+      }
+    ]
+  },
+  {
+    "name": "Mutton curry",
+    "source": "custom",
+    "kcal100": 160,
+    "protein100": 13,
+    "carbs100": 4,
+    "fat100": 10,
+    "fiber100": 0.5,
+    "micros": {
+      "iron_mg": 2.0,
+      "calcium_mg": 25,
+      "vitamin_b12_mcg": 2.0,
+      "vitamin_d_mcg": 0.1,
+      "potassium_mg": 260,
+      "magnesium_mg": 20,
+      "zinc_mg": 3.5
+    },
+    "aliases": [
+      "mutton curry",
+      "mutton",
+      "lamb curry",
+      "goat curry"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Canned tuna (in water)",
+    "source": "custom",
+    "kcal100": 116,
+    "protein100": 25.5,
+    "carbs100": 0,
+    "fat100": 0.8,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 1.0,
+      "calcium_mg": 11,
+      "vitamin_b12_mcg": 2.2,
+      "vitamin_d_mcg": 1.7,
+      "potassium_mg": 237,
+      "magnesium_mg": 30,
+      "zinc_mg": 0.8
+    },
+    "aliases": [
+      "tuna",
+      "canned tuna",
+      "tuna in water"
+    ],
+    "portions": [
+      {
+        "unit": "tin",
+        "grams": 85
+      }
+    ]
+  },
+  {
+    "name": "Aloo sabzi",
+    "source": "custom",
+    "kcal100": 130,
+    "protein100": 2,
+    "carbs100": 17,
+    "fat100": 6,
+    "fiber100": 1.8,
+    "micros": {
+      "iron_mg": 0.8,
+      "calcium_mg": 15,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 380,
+      "magnesium_mg": 20,
+      "zinc_mg": 0.4
+    },
+    "aliases": [
+      "aloo sabzi",
+      "aloo sabji",
+      "potato curry",
+      "aloo curry",
+      "aloo ki sabzi"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Palak paneer",
+    "source": "custom",
+    "kcal100": 140,
+    "protein100": 7,
+    "carbs100": 4.5,
+    "fat100": 10.5,
+    "fiber100": 1.5,
+    "micros": {
+      "iron_mg": 1.8,
+      "calcium_mg": 150,
+      "vitamin_b12_mcg": 0.1,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 330,
+      "magnesium_mg": 35,
+      "zinc_mg": 1.0
+    },
+    "aliases": [
+      "palak paneer"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Paneer butter masala",
+    "source": "custom",
+    "kcal100": 200,
+    "protein100": 8,
+    "carbs100": 8,
+    "fat100": 15,
+    "fiber100": 1,
+    "micros": {
+      "iron_mg": 0.7,
+      "calcium_mg": 130,
+      "vitamin_b12_mcg": 0.2,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 150,
+      "magnesium_mg": 15,
+      "zinc_mg": 0.9
+    },
+    "aliases": [
+      "paneer butter masala",
+      "butter paneer",
+      "paneer makhani",
+      "paneer masala"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Mixed veg sabzi",
+    "source": "custom",
+    "kcal100": 85,
+    "protein100": 2,
+    "carbs100": 8,
+    "fat100": 5,
+    "fiber100": 2.5,
+    "micros": {
+      "iron_mg": 0.8,
+      "calcium_mg": 30,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 200,
+      "magnesium_mg": 18,
+      "zinc_mg": 0.4
+    },
+    "aliases": [
+      "sabzi",
+      "sabji",
+      "mixed veg",
+      "mix veg",
+      "veg curry",
+      "vegetable curry",
+      "mixed vegetable"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Bhindi sabzi",
+    "source": "custom",
+    "kcal100": 95,
+    "protein100": 2,
+    "carbs100": 8,
+    "fat100": 6,
+    "fiber100": 3,
+    "micros": {
+      "iron_mg": 0.7,
+      "calcium_mg": 60,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 230,
+      "magnesium_mg": 45,
+      "zinc_mg": 0.5
+    },
+    "aliases": [
+      "bhindi",
+      "okra",
+      "bhindi sabzi",
+      "bhindi fry"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Dal makhani",
+    "source": "custom",
+    "kcal100": 140,
+    "protein100": 6,
+    "carbs100": 14,
+    "fat100": 7,
+    "fiber100": 4,
+    "micros": {
+      "iron_mg": 1.8,
+      "calcium_mg": 40,
+      "vitamin_b12_mcg": 0.1,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 260,
+      "magnesium_mg": 30,
+      "zinc_mg": 0.9
+    },
+    "aliases": [
+      "dal makhani",
+      "dal makhni"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Khichdi",
+    "source": "custom",
+    "kcal100": 120,
+    "protein100": 4,
+    "carbs100": 19,
+    "fat100": 3,
+    "fiber100": 1.5,
+    "micros": {
+      "iron_mg": 1.0,
+      "calcium_mg": 18,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 120,
+      "magnesium_mg": 22,
+      "zinc_mg": 0.7
+    },
+    "aliases": [
+      "khichdi",
+      "khichri"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      },
+      {
+        "unit": "plate",
+        "grams": 250
+      }
+    ]
+  },
+  {
+    "name": "Chicken biryani",
+    "source": "custom",
+    "kcal100": 170,
+    "protein100": 9,
+    "carbs100": 20,
+    "fat100": 6,
+    "fiber100": 1,
+    "micros": {
+      "iron_mg": 1.1,
+      "calcium_mg": 25,
+      "vitamin_b12_mcg": 0.3,
+      "vitamin_d_mcg": 0.1,
+      "potassium_mg": 160,
+      "magnesium_mg": 22,
+      "zinc_mg": 1.2
+    },
+    "aliases": [
+      "biryani",
+      "chicken biryani"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      },
+      {
+        "unit": "plate",
+        "grams": 300
+      }
+    ]
+  },
+  {
+    "name": "Raita",
+    "source": "custom",
+    "kcal100": 55,
+    "protein100": 2.5,
+    "carbs100": 4.5,
+    "fat100": 3,
+    "fiber100": 0.3,
+    "micros": {
+      "iron_mg": 0.1,
+      "calcium_mg": 90,
+      "vitamin_b12_mcg": 0.3,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 140,
+      "magnesium_mg": 10,
+      "zinc_mg": 0.4
+    },
+    "aliases": [
+      "raita",
+      "boondi raita",
+      "cucumber raita"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "name": "Veg salad (cucumber, tomato, onion)",
+    "source": "custom",
+    "kcal100": 15,
+    "protein100": 0.7,
+    "carbs100": 3.3,
+    "fat100": 0.1,
+    "fiber100": 1,
+    "micros": {
+      "iron_mg": 0.3,
+      "calcium_mg": 15,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 170,
+      "magnesium_mg": 10,
+      "zinc_mg": 0.2
+    },
+    "aliases": [
+      "salad",
+      "veg salad",
+      "green salad",
+      "kachumber"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 100
+      },
+      {
+        "unit": "plate",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Cucumber",
+    "source": "custom",
+    "kcal100": 15,
+    "protein100": 0.7,
+    "carbs100": 3.6,
+    "fat100": 0.1,
+    "fiber100": 0.5,
+    "micros": {
+      "iron_mg": 0.3,
+      "calcium_mg": 16,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 147,
+      "magnesium_mg": 13,
+      "zinc_mg": 0.2
+    },
+    "aliases": [
+      "cucumber",
+      "kheera",
+      "kakdi"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Tomato",
+    "source": "custom",
+    "kcal100": 18,
+    "protein100": 0.9,
+    "carbs100": 3.9,
+    "fat100": 0.2,
+    "fiber100": 1.2,
+    "micros": {
+      "iron_mg": 0.3,
+      "calcium_mg": 10,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 237,
+      "magnesium_mg": 11,
+      "zinc_mg": 0.2
+    },
+    "aliases": [
+      "tomato",
+      "tomatoes",
+      "tamatar"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 90
+      }
+    ]
+  },
+  {
+    "name": "Onion",
+    "source": "custom",
+    "kcal100": 40,
+    "protein100": 1.1,
+    "carbs100": 9.3,
+    "fat100": 0.1,
+    "fiber100": 1.7,
+    "micros": {
+      "iron_mg": 0.2,
+      "calcium_mg": 23,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 146,
+      "magnesium_mg": 10,
+      "zinc_mg": 0.2
+    },
+    "aliases": [
+      "onion",
+      "onions",
+      "pyaz"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "name": "Broccoli (boiled)",
+    "source": "custom",
+    "kcal100": 35,
+    "protein100": 2.4,
+    "carbs100": 7.2,
+    "fat100": 0.4,
+    "fiber100": 3.3,
+    "micros": {
+      "iron_mg": 0.7,
+      "calcium_mg": 40,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 293,
+      "magnesium_mg": 21,
+      "zinc_mg": 0.5
+    },
+    "aliases": [
+      "broccoli",
+      "boiled broccoli"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 100
+      },
+      {
+        "unit": "cup",
+        "grams": 156
+      }
+    ]
+  },
+  {
+    "name": "Potato (boiled)",
+    "source": "custom",
+    "kcal100": 87,
+    "protein100": 1.9,
+    "carbs100": 20,
+    "fat100": 0.1,
+    "fiber100": 1.8,
+    "micros": {
+      "iron_mg": 0.3,
+      "calcium_mg": 5,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 379,
+      "magnesium_mg": 22,
+      "zinc_mg": 0.3
+    },
+    "aliases": [
+      "potato",
+      "boiled potato",
+      "aloo",
+      "potatoes"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "name": "Sweet potato (boiled)",
+    "source": "custom",
+    "kcal100": 76,
+    "protein100": 1.4,
+    "carbs100": 17.7,
+    "fat100": 0.1,
+    "fiber100": 2.5,
+    "micros": {
+      "iron_mg": 0.7,
+      "calcium_mg": 27,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 230,
+      "magnesium_mg": 18,
+      "zinc_mg": 0.3
+    },
+    "aliases": [
+      "sweet potato",
+      "shakarkandi"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 130
+      }
+    ]
+  },
+  {
+    "name": "Banana",
+    "source": "custom",
+    "kcal100": 89,
+    "protein100": 1.1,
+    "carbs100": 22.8,
+    "fat100": 0.3,
+    "fiber100": 2.6,
+    "micros": {
+      "iron_mg": 0.3,
+      "calcium_mg": 5,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 358,
+      "magnesium_mg": 27,
+      "zinc_mg": 0.2
+    },
+    "aliases": [
+      "banana",
+      "bananas",
+      "kela"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "name": "Apple",
+    "source": "custom",
+    "kcal100": 52,
+    "protein100": 0.3,
+    "carbs100": 13.8,
+    "fat100": 0.2,
+    "fiber100": 2.4,
+    "micros": {
+      "iron_mg": 0.1,
+      "calcium_mg": 6,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 107,
+      "magnesium_mg": 5,
+      "zinc_mg": 0
+    },
+    "aliases": [
+      "apple",
+      "apples",
+      "seb"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Orange",
+    "source": "custom",
+    "kcal100": 47,
+    "protein100": 0.9,
+    "carbs100": 11.8,
+    "fat100": 0.1,
+    "fiber100": 2.4,
+    "micros": {
+      "iron_mg": 0.1,
+      "calcium_mg": 40,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 181,
+      "magnesium_mg": 10,
+      "zinc_mg": 0.1
+    },
+    "aliases": [
+      "orange",
+      "oranges",
+      "santra"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 130
+      }
+    ]
+  },
+  {
+    "name": "Mango",
+    "source": "custom",
+    "kcal100": 60,
+    "protein100": 0.8,
+    "carbs100": 15,
+    "fat100": 0.4,
+    "fiber100": 1.6,
+    "micros": {
+      "iron_mg": 0.2,
+      "calcium_mg": 11,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 168,
+      "magnesium_mg": 10,
+      "zinc_mg": 0.1
+    },
+    "aliases": [
+      "mango",
+      "mangoes",
+      "aam"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 200
+      },
+      {
+        "unit": "cup",
+        "grams": 165
+      }
+    ]
+  },
+  {
+    "name": "Papaya",
+    "source": "custom",
+    "kcal100": 43,
+    "protein100": 0.5,
+    "carbs100": 10.8,
+    "fat100": 0.3,
+    "fiber100": 1.7,
+    "micros": {
+      "iron_mg": 0.3,
+      "calcium_mg": 20,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 182,
+      "magnesium_mg": 21,
+      "zinc_mg": 0.1
+    },
+    "aliases": [
+      "papaya",
+      "papita"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      }
+    ]
+  },
+  {
+    "name": "Watermelon",
+    "source": "custom",
+    "kcal100": 30,
+    "protein100": 0.6,
+    "carbs100": 7.6,
+    "fat100": 0.2,
+    "fiber100": 0.4,
+    "micros": {
+      "iron_mg": 0.2,
+      "calcium_mg": 7,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 112,
+      "magnesium_mg": 10,
+      "zinc_mg": 0.1
+    },
+    "aliases": [
+      "watermelon",
+      "tarbooz"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 150
+      },
+      {
+        "unit": "cup",
+        "grams": 152
+      }
+    ]
+  },
+  {
+    "name": "Grapes",
+    "source": "custom",
+    "kcal100": 69,
+    "protein100": 0.7,
+    "carbs100": 18.1,
+    "fat100": 0.2,
+    "fiber100": 0.9,
+    "micros": {
+      "iron_mg": 0.4,
+      "calcium_mg": 10,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 191,
+      "magnesium_mg": 7,
+      "zinc_mg": 0.1
+    },
+    "aliases": [
+      "grapes",
+      "angoor"
+    ],
+    "portions": [
+      {
+        "unit": "katori",
+        "grams": 100
+      },
+      {
+        "unit": "handful",
+        "grams": 80
+      }
+    ]
+  },
+  {
+    "name": "Dates (khajur)",
+    "source": "custom",
+    "kcal100": 282,
+    "protein100": 2.5,
+    "carbs100": 75,
+    "fat100": 0.4,
+    "fiber100": 8,
+    "micros": {
+      "iron_mg": 0.9,
+      "calcium_mg": 39,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 656,
+      "magnesium_mg": 43,
+      "zinc_mg": 0.4
+    },
+    "aliases": [
+      "dates",
+      "khajur",
+      "date"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 8
+      }
+    ]
+  },
+  {
+    "name": "Almonds",
+    "source": "custom",
+    "kcal100": 579,
+    "protein100": 21.2,
+    "carbs100": 21.6,
+    "fat100": 49.9,
+    "fiber100": 12.5,
+    "micros": {
+      "iron_mg": 3.7,
+      "calcium_mg": 269,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 733,
+      "magnesium_mg": 270,
+      "zinc_mg": 3.1
+    },
+    "aliases": [
+      "almonds",
+      "almond",
+      "badam"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 1.2
+      },
+      {
+        "unit": "handful",
+        "grams": 28
+      },
+      {
+        "unit": "tbsp",
+        "grams": 9
+      }
+    ]
+  },
+  {
+    "name": "Peanuts (roasted)",
+    "source": "custom",
+    "kcal100": 585,
+    "protein100": 23.7,
+    "carbs100": 21.5,
+    "fat100": 49.7,
+    "fiber100": 8,
+    "micros": {
+      "iron_mg": 1.3,
+      "calcium_mg": 54,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 705,
+      "magnesium_mg": 168,
+      "zinc_mg": 3.3
+    },
+    "aliases": [
+      "peanuts",
+      "roasted peanuts",
+      "moongfali",
+      "groundnuts"
+    ],
+    "portions": [
+      {
+        "unit": "handful",
+        "grams": 30
+      },
+      {
+        "unit": "tbsp",
+        "grams": 9
+      }
+    ]
+  },
+  {
+    "name": "Peanut butter",
+    "source": "custom",
+    "kcal100": 588,
+    "protein100": 25,
+    "carbs100": 20,
+    "fat100": 50,
+    "fiber100": 6,
+    "micros": {
+      "iron_mg": 1.9,
+      "calcium_mg": 49,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 649,
+      "magnesium_mg": 168,
+      "zinc_mg": 2.5
+    },
+    "aliases": [
+      "peanut butter"
+    ],
+    "portions": [
+      {
+        "unit": "tbsp",
+        "grams": 16
+      },
+      {
+        "unit": "tsp",
+        "grams": 5
+      }
+    ]
+  },
+  {
+    "name": "Walnuts",
+    "source": "custom",
+    "kcal100": 654,
+    "protein100": 15.2,
+    "carbs100": 13.7,
+    "fat100": 65.2,
+    "fiber100": 6.7,
+    "micros": {
+      "iron_mg": 2.9,
+      "calcium_mg": 98,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 441,
+      "magnesium_mg": 158,
+      "zinc_mg": 3.1
+    },
+    "aliases": [
+      "walnuts",
+      "walnut",
+      "akhrot"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 5
+      },
+      {
+        "unit": "handful",
+        "grams": 28
+      }
+    ]
+  },
+  {
+    "name": "Chia seeds",
+    "source": "custom",
+    "kcal100": 486,
+    "protein100": 16.5,
+    "carbs100": 42,
+    "fat100": 31,
+    "fiber100": 34,
+    "micros": {
+      "iron_mg": 7.7,
+      "calcium_mg": 631,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 407,
+      "magnesium_mg": 335,
+      "zinc_mg": 4.6
+    },
+    "aliases": [
+      "chia seeds",
+      "chia"
+    ],
+    "portions": [
+      {
+        "unit": "tbsp",
+        "grams": 12
+      }
+    ]
+  },
+  {
+    "name": "Makhana (fox nuts)",
+    "source": "custom",
+    "kcal100": 347,
+    "protein100": 9.7,
+    "carbs100": 76.9,
+    "fat100": 0.1,
+    "fiber100": 14,
+    "micros": {
+      "iron_mg": 1.4,
+      "calcium_mg": 60,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 500,
+      "magnesium_mg": 67,
+      "zinc_mg": 1.0
+    },
+    "aliases": [
+      "makhana",
+      "fox nuts",
+      "lotus seeds",
+      "phool makhana"
+    ],
+    "portions": [
+      {
+        "unit": "handful",
+        "grams": 20
+      },
+      {
+        "unit": "katori",
+        "grams": 25
+      }
+    ]
+  },
+  {
+    "name": "Samosa",
+    "source": "custom",
+    "kcal100": 262,
+    "protein100": 3.5,
+    "carbs100": 24,
+    "fat100": 17,
+    "fiber100": 2,
+    "micros": {
+      "iron_mg": 1.2,
+      "calcium_mg": 20,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 200,
+      "magnesium_mg": 15,
+      "zinc_mg": 0.4
+    },
+    "aliases": [
+      "samosa",
+      "samosas"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "name": "Sugar",
+    "source": "custom",
+    "kcal100": 387,
+    "protein100": 0,
+    "carbs100": 100,
+    "fat100": 0,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 0,
+      "calcium_mg": 1,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 2,
+      "magnesium_mg": 0,
+      "zinc_mg": 0
+    },
+    "aliases": [
+      "sugar",
+      "cheeni"
+    ],
+    "portions": [
+      {
+        "unit": "tsp",
+        "grams": 4
+      },
+      {
+        "unit": "tbsp",
+        "grams": 12
+      }
+    ]
+  },
+  {
+    "name": "Chai (milk tea with sugar)",
+    "source": "custom",
+    "kcal100": 45,
+    "protein100": 1.3,
+    "carbs100": 7,
+    "fat100": 1.5,
+    "fiber100": 0,
+    "micros": {
+      "iron_mg": 0.0,
+      "calcium_mg": 50,
+      "vitamin_b12_mcg": 0.2,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 70,
+      "magnesium_mg": 6,
+      "zinc_mg": 0.2
+    },
+    "aliases": [
+      "chai",
+      "tea",
+      "milk tea",
+      "masala chai",
+      "tea with milk and sugar"
+    ],
+    "portions": [
+      {
+        "unit": "cup",
+        "grams": 150
+      },
+      {
+        "unit": "glass",
+        "grams": 200
+      }
+    ]
+  },
+  {
+    "name": "Biscuit (Parle-G / Marie)",
+    "source": "custom",
+    "kcal100": 450,
+    "protein100": 6.7,
+    "carbs100": 76,
+    "fat100": 12.5,
+    "fiber100": 1,
+    "micros": {
+      "iron_mg": 1.5,
+      "calcium_mg": 30,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 100,
+      "magnesium_mg": 15,
+      "zinc_mg": 0.5
+    },
+    "aliases": [
+      "biscuit",
+      "biscuits",
+      "parle g",
+      "marie biscuit"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 5
+      }
+    ]
+  },
+  {
+    "name": "Dark chocolate",
+    "source": "custom",
+    "kcal100": 546,
+    "protein100": 5,
+    "carbs100": 61,
+    "fat100": 31,
+    "fiber100": 7,
+    "micros": {
+      "iron_mg": 11,
+      "calcium_mg": 73,
+      "vitamin_b12_mcg": 0,
+      "vitamin_d_mcg": 0,
+      "potassium_mg": 715,
+      "magnesium_mg": 228,
+      "zinc_mg": 3.3
+    },
+    "aliases": [
+      "dark chocolate",
+      "chocolate"
+    ],
+    "portions": [
+      {
+        "unit": "piece",
+        "grams": 10
+      }
+    ]
+  }
+]
