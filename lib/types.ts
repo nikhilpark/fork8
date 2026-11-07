@@ -46,6 +46,7 @@ export type SaveLogBody = z.infer<typeof SaveLogBody>;
 export const OnboardingBody = z.object({
   heightCm: z.number().min(100).max(250),
   weightKg: z.number().min(30).max(300),
+  name: z.string().trim().min(1).max(40),
   age: z.number().int().min(18).max(100), // targets are tuned for adults
   sex: z.enum(["male", "female", "other"]),
   activityLevel: z.enum(["sedentary", "light", "moderate", "active", "very_active"]),

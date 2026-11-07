@@ -1,6 +1,8 @@
 export type DayData = {
   logs: { id: string; mealType: string; loggedAt: string; rawText: string; items: any[] }[];
   totals: { kcal: number; protein: number; carbs: number; fat: number; micros: Record<string, number> };
+  streak: number;
+  loggedToday: boolean;
 };
 
 async function j<T>(res: Response): Promise<T> {

@@ -4,6 +4,7 @@ import { z } from "zod";
 import { requireUser } from "@/lib/supabase/server";
 import { db } from "@/db";
 import { mealLogs, logItems } from "@/db/schema";
+import { computeStreak } from "@/lib/streak";
 
 const Query = z.object({
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
@@ -43,10 +44,25 @@ export async function GET(req: Request) {
     totals.protein = r(totals.protein); totals.carbs = r(totals.carbs); totals.fat = r(totals.fat);
     for (const k in totals.micros) totals.micros[k] = r(totals.micros[k]);
 
-    return NextResponse.json({
-      logs: logs.map((l) => ({ ...l, items: items.filter((i) => i.logId === l.id) })),
-      totals,
-    });
+    const streakQ: any = await db.execute(sql`
+  select to_char((ml.logged_at at time zone ${tz})::date, 'YYYY-MM-DD') as day
+  from meal_logs ml join log_items li on li.log_id = ml.id
+  where ml.user_id = ${user.id}
+    and (ml.logged_at at time zone ${tz})::date >= (now() at time zone ${tz})::date - 364
+  group by 1
+  having sum(li.kcal) > 0`);
+const { streak, loggedToday } = computeStreak(
+  new Set<string>((streakQ.rows ?? streakQ).map((r: any) => r.day)),
+  tz,
+);
+
+
+   return NextResponse.json({
+  logs: logs.map((l) => ({ ...l, items: items.filter((i) => i.logId === l.id) })),
+  totals,
+  streak,
+  loggedToday,
+});
   } catch (e) {
     if (e instanceof Response) return e;
     console.error("day failed", e);

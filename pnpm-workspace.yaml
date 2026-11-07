@@ -6,5 +6,5 @@ minimumReleaseAgeExclude:
 
 allowBuilds:
   '@google/genai': true
-  esbuild: set this to true or false
+  esbuild: true
   protobufjs: true

@@ -5,6 +5,7 @@ export const profiles = pgTable("profiles", {
   heightCm: real("height_cm"),
   weightKg: real("weight_kg"),
   age: integer("age"),
+  name: text("name"),
   sex: text("sex"),
   activityLevel: text("activity_level"),
   dietType: text("diet_type"),

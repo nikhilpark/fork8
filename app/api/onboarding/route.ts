@@ -11,16 +11,16 @@ export async function POST(req: Request) {
     const today = new Intl.DateTimeFormat("en-CA", { timeZone: b.timezone }).format(new Date()); // YYYY-MM-DD
 
     await db.transaction(async (tx) => {
-      await tx.insert(profiles).values({
-        id: user.id, heightCm: b.heightCm, weightKg: b.weightKg, age: b.age, sex: b.sex,
-        activityLevel: b.activityLevel, dietType: b.dietType, timezone: b.timezone,
-      }).onConflictDoUpdate({
-        target: profiles.id,
-        set: {
-          heightCm: b.heightCm, weightKg: b.weightKg, age: b.age, sex: b.sex,
-          activityLevel: b.activityLevel, dietType: b.dietType, timezone: b.timezone,
-        },
-      });
+  await tx.insert(profiles).values({
+  id: user.id, name: b.name, heightCm: b.heightCm, weightKg: b.weightKg, age: b.age, sex: b.sex,
+  activityLevel: b.activityLevel, dietType: b.dietType, timezone: b.timezone,
+}).onConflictDoUpdate({
+  target: profiles.id,
+  set: {
+    name: b.name, heightCm: b.heightCm, weightKg: b.weightKg, age: b.age, sex: b.sex,
+    activityLevel: b.activityLevel, dietType: b.dietType, timezone: b.timezone,
+  },
+});
 
       // new row each time, so goal history is kept
       await tx.insert(goals).values({

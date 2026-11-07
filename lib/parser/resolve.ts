@@ -9,6 +9,7 @@ const GENERIC_GRAMS: Record<string, number> = { g: 1, ml: 1 }; // fallback unit 
 const DEFAULT_PIECE_G = 50;
 
 async function findFood(name: string) {
+  console.log("findFood","name",name)
   const q = name.toLowerCase().trim();
   const rows: any = await db.execute(sql`select * from search_food(${q})`);
   const best = (rows.rows ?? rows)[0];
