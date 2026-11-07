@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Plate — Calm calorie tracking',
+  title: 'Fork8 — Calm calorie tracking',
   description: 'A simpler way to understand your meals and macros.',
   generator: 'v0.app',
   icons: {

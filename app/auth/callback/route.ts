@@ -8,7 +8,6 @@ export async function GET(request: Request) {
   if (code) {
     const supabase = await getSupabase();
     const { error } = await supabase.auth.exchangeCodeForSession(code);
-    if (!error) return NextResponse.redirect(`${origin}/`);
+    if (!error) return NextResponse.redirect("https://fork8.nikhilpark.com/login?error=auth");
   }
-  return NextResponse.redirect(`${origin}/login?error=auth`);
-}
+return NextResponse.redirect("https://fork8.nikhilpark.com/");}
