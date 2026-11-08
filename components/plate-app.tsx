@@ -1597,8 +1597,8 @@ function Profile({ dark, setDark, setOnboard, me }: any) {
       </button>
       <button
         onClick={async () => {
-          await fetch("/api/auth/signout", { method: "POST" });
-          window.location.href = "/login";
+          await fetch("/auth/signout", { method: "POST" });
+          window.location.href = "/";
         }}
         className="mt-3 min-h-12 w-full rounded-2xl text-sm font-medium text-[#718078]"
       >

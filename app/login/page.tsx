@@ -15,6 +15,8 @@ export default function LoginPage() {
       email,
       options: { emailRedirectTo: `${window.location.origin}/auth/callback` },
     });
+        console.log("supabase email redirect to:",`${window.location.origin}/auth/callback`)
+
     if (error) {
       setError(error.message);
       setStatus("error");
@@ -22,6 +24,8 @@ export default function LoginPage() {
       setStatus("sent");
     }
   }
+
+
 
   return (
     <main className="mx-auto flex min-h-dvh max-w-sm flex-col justify-center gap-4 p-6">
