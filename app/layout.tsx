@@ -3,8 +3,13 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Plate — Calm calorie tracking',
-  description: 'A simpler way to understand your meals and macros.',
+  title: 'Fork8 — Eat naturally. Track intelligently.',
+  description: 'Fork8 makes nutrition tracking effortless with natural-language food logging, structured database matching, and personal nutrition intelligence.',
+  openGraph: {
+    title: 'Fork8 — Eat naturally. Track intelligently.',
+    description: 'Understand your nutrition without changing the way you eat.',
+    type: 'website',
+  },
   generator: 'v0.app',
   icons: {
     icon: [
