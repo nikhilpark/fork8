@@ -15,6 +15,22 @@ export const LLMParse = z.object({
 export type LLMParse = z.infer<typeof LLMParse>;
 
 // What /api/parse returns to the frontend (match your mock shape)
+export const NewFood = z
+  .object({
+    name: z.string().trim().min(1).max(80),
+    query: z.string().trim().max(80).optional(),
+    aliases: z.array(z.string().trim().min(1).max(60)).max(8).default([]),
+    kcal100: z.number().min(0).max(900),
+    protein100: z.number().min(0).max(100),
+    carbs100: z.number().min(0).max(100),
+    fat100: z.number().min(0).max(100),
+    fiber100: z.number().min(0).max(100).default(0),
+    portions: z.array(z.object({ unit: z.enum(UNITS), grams: z.number().positive().max(2000) })).max(6).default([]),
+    note: z.string().max(300).optional(),
+    sources: z.array(z.string().max(120)).max(3).default([]),
+  })
+  .refine((f) => f.protein100 + f.carbs100 + f.fat100 <= 105 && f.fiber100 <= f.carbs100 + 0.5, "Nutrition values look inconsistent");
+
 export const DraftItem = z.object({
   name: z.string(),
   foodId: z.string().nullable(),
@@ -25,23 +41,23 @@ export const DraftItem = z.object({
   protein: z.number(),
   carbs: z.number(),
   fat: z.number(),
- micros: z.record(z.string(), z.number()),
-  confidence: z.enum(["high","medium","low"]),
+  micros: z.record(z.string(), z.number()),
+  confidence: z.enum(["high", "medium", "low"]),
   estimated: z.boolean(),
+  query: z.string().optional(),
+  candidates: z.array(z.unknown()).optional(),
 });
-export const Draft = z.object({
-  mealType: z.enum(MEAL_TYPES),
-  items: z.array(DraftItem),
-});
-export type Draft = z.infer<typeof Draft>;
+
+export const SaveItem = DraftItem.omit({ candidates: true, query: true }).extend({ newFood: NewFood.optional() });
 
 export const SaveLogBody = z.object({
   mealType: z.enum(MEAL_TYPES),
   rawText: z.string().max(500),
-  loggedAt: z.string().datetime().optional(), // ISO string; defaults to now
-  items: z.array(DraftItem).min(1),
+  loggedAt: z.string().datetime().optional(),
+  items: z.array(SaveItem).min(1),
 });
 export type SaveLogBody = z.infer<typeof SaveLogBody>;
+export type NewFood = z.infer<typeof NewFood>;
 
 export const OnboardingBody = z.object({
   heightCm: z.number().min(100).max(250),

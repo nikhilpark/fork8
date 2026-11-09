@@ -2,6 +2,8 @@
 import { useEffect, useMemo, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence, useDragControls } from "motion/react";
+import { type Candidate, applyCandidate, scaleItem, convertQty, sameFood } from "@/lib/nutrition";
+import { searchFoods, estimateFood } from "@/lib/api/foods";
 import {
   ArrowLeft,
   ArrowRight,
@@ -22,6 +24,9 @@ import {
   Trash2,
   TrendingDown,
   X,
+  Minus,
+  Check,
+  Loader2
 } from "lucide-react";
 // import { parseMealText, ParsedItem } from "@/lib/mock/parser";
 // import { profile as seedProfile, seedMeals, history } from "@/lib/mock/seed";
@@ -52,8 +57,23 @@ type Item = {
   estimated?: boolean;
 };
 type Meal = { type: string; items: Item[] };
-type Draft = { mealType: string; items: Item[]; rawText?: string };
+type DItem = Item & {
+  key: string;
+  query?: string;
+  candidates?: Candidate[];
+  food?: Candidate;
+  busy?: boolean;
+  err?: string;
+};
+type Draft = { mealType: string; items: DItem[]; rawText?: string };
 
+const mkKey = () => Math.random().toString(36).slice(2, 9);
+const prepItems = (items: any[]): DItem[] =>
+  items.map((i) => ({
+    ...i,
+    key: mkKey(),
+    food: i.candidates?.find((c: Candidate) => c.foodId && c.foodId === i.foodId),
+  }));
 const DEFAULT_TARGETS = { kcal: 2000, protein: 120, carbs: 220, fat: 60 };
 const fmt = (n: number) => Math.round(n);
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
@@ -297,6 +317,7 @@ export default function PlateApp() {
           draft={draft}
           setDraft={setDraft}
           save={saveDraft}
+          notify={notify}
           saving={saving}
         />
       )}
@@ -340,8 +361,9 @@ function Today({
   setWorking(true);
   try {
     const parsed = await parseMealText(t);
-    setDraft({ ...parsed, rawText: t });
-  } catch (e: any) {
+setDraft({ ...parsed, items: prepItems(parsed.items), rawText: t });  
+
+} catch (e: any) {
     notify(e.message ?? "Couldn't parse that, try rephrasing");
   } finally {
     setWorking(false);
@@ -692,130 +714,247 @@ function MealCard({ type, meal, open, setOpen, remove }: any) {
   );
 }
 
-function Confirm({ draft, setDraft, save, saving }: any) {
-  const dragControls = useDragControls();
+function FoodPicker({ item, onPick, notify }: { item: DItem; onPick: (c: Candidate) => void; notify: (m: string) => void }) {
+  const [q, setQ] = useState("");
+  const [results, setResults] = useState<Candidate[]>([]);
+  const [loading, setLoading] = useState(false);
+  const searching = q.trim().length >= 2;
 
-  const total = draft.items.reduce(
-    (a: any, i: any) => ({
-      kcal: a.kcal + i.kcal,
-      protein: a.protein + i.protein,
-      carbs: a.carbs + i.carbs,
-      fat: a.fat + i.fat,
-    }),
-    { kcal: 0, protein: 0, carbs: 0, fat: 0 },
-  );
+  useEffect(() => {
+    const t = q.trim();
+    if (t.length < 2) { setResults([]); return; }
+    setLoading(true);
+    const id = setTimeout(() => {
+      searchFoods(t).then(setResults).catch(() => notify("Search failed")).finally(() => setLoading(false));
+    }, 250);
+    return () => clearTimeout(id);
+  }, [q]);
+
+  const list = searching ? results : item.candidates ?? [];
   return (
-    <AnimatePresence>
-      {draft && (
-        <motion.div
-          className="fixed inset-0 z-30 flex items-end justify-center bg-black/30"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={() => setDraft(null)}
-        >
-          <motion.div
-            drag="y"
-            dragControls={dragControls}
-            dragListener={false}
-            dragConstraints={{ top: 0, bottom: 0 }}
-            dragElastic={{ top: 0, bottom: 0.65 }}
-            onDragEnd={(_, info) => {
-              if (info.offset.y > 120 || info.velocity.y > 700) {
-                setDraft(null);
-              }
-            }}
-            initial={{ y: "100%" }}
-            animate={{ y: 0 }}
-            exit={{ y: "100%" }}
-            transition={{
-              type: "spring",
-              damping: 30,
-              stiffness: 300,
-            }}
-            onClick={(e) => e.stopPropagation()}
-            className="w-full max-w-md rounded-t-[28px] bg-[#fbfdfb] p-5 pb-8 text-[#17231e] shadow-2xl dark:bg-[#17201c] dark:text-[#edf5f0]"
+    <div className="mt-3 rounded-2xl bg-[#f6f8f6] p-2 dark:bg-[#111715]">
+      <input
+        value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search foods…" autoFocus
+        className="h-10 w-full rounded-xl border border-[#dce7de] bg-white px-3 text-base outline-none focus:border-[#28a866] dark:bg-[#1b2520]"
+      />
+      <div className="mt-2 max-h-52 overflow-y-auto">
+        {loading && <p className="px-3 py-2 text-xs text-[#89968e]">Searching…</p>}
+        {!loading && list.length === 0 && (
+          <p className="px-3 py-2 text-xs text-[#89968e]">{searching ? "No matches. Try another word." : "No suggestions. Type to search."}</p>
+        )}
+        {list.map((c) => (
+          <button
+            key={c.foodId ?? "new"} onClick={() => onPick(c)}
+            className="flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-sm hover:bg-white dark:hover:bg-[#1b2520]"
           >
-            {/* DRAG HANDLE */}
-            <div
-              onPointerDown={(e) => dragControls.start(e)}
-              className="mx-auto flex h-5 w-16 cursor-grab touch-none items-center justify-center active:cursor-grabbing"
-            >
-              <div className="h-1 w-10 rounded-full bg-[#d4ddd6]" />
-            </div>
-
-            {/* YOUR EXISTING CONTENT STARTS HERE */}
-
-            <div className="mt-5 flex items-center justify-between">
-              <div>
-                <p className="text-xs font-medium uppercase tracking-widest text-[#32a964]">
-                  Ready to log
-                </p>
-                <h2 className="mt-1 text-xl font-semibold">Check your meal</h2>
-              </div>
-            </div>
-
-            <div className="mt-5 flex gap-2">
-              {["Breakfast", "Lunch", "Dinner", "Snack"].map((t) => (
-                <button
-                  key={t}
-                  onClick={() => setDraft({ ...draft, mealType: t })}
-                  className={`rounded-full px-3 py-2 text-xs ${draft.mealType === t ? "bg-[#1e9b59] text-white" : "bg-[#edf5ee] text-[#607168]"}`}
-                >
-                  {t}
-                </button>
-              ))}
-            </div>
-            <div className="mt-4 divide-y divide-[#edf1ed]">
-              {draft.items.map((i: any, n: number) => (
-                <div key={n} className="flex items-center justify-between py-3">
-                  <div>
-                    <div className="font-medium">
-                      {i.name}{" "}
-                      {i.estimated && (
-                        <span className="ml-1 rounded bg-[#fff3d6] px-1.5 py-0.5 text-[10px] text-[#9b7526]">
-                          estimated
-                        </span>
-                      )}
-                    </div>
-                    <div className="text-xs text-[#89968e]">
-                      {i.qty} {i.unit}
-                    </div>
-                  </div>
-                  <span className="tabular-nums text-sm">{i.kcal} kcal</span>
-                </div>
-              ))}
-            </div>
-            <div className="mt-4 rounded-2xl bg-[#eff8f0] p-4 dark:bg-[#1f2d26]">
-              <div className="flex justify-between font-semibold">
-                <span>Total</span>
-                <span>{total.kcal} kcal</span>
-              </div>
-              <div className="mt-2 text-xs text-[#607168]">
-                P {fmt(total.protein)}g · C {fmt(total.carbs)}g · F{" "}
-                {fmt(total.fat)}g
-              </div>
-            </div>
-            <button
-              onClick={save}
-              disabled={saving}
-              className="mt-5 min-h-12 w-full rounded-2xl bg-[#1e9b59] font-semibold text-white shadow-lg shadow-[#1e9b59]/20 disabled:opacity-60"
-            >
-              {saving ? "Saving…" : "Save meal"}
-            </button>
-            <button
-              onClick={() => setDraft(null)}
-              className="mt-2 min-h-11 w-full text-sm font-medium text-[#718078]"
-            >
-              Discard
-            </button>
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+            <span className="flex min-w-0 items-center gap-1.5">
+              {item.food && sameFood(item.food, c) && <Check size={14} className="shrink-0 text-[#208850]" />}
+              <span className="truncate">{c.name}</span>
+              {c.source === "ai" && <span className="shrink-0 rounded bg-[#fff3d6] px-1 py-0.5 text-[10px] text-[#9b7526]">unverified</span>}
+            </span>
+            <span className="shrink-0 text-xs tabular-nums text-[#89968e]">{Math.round(c.kcal100)} kcal/100g</span>
+          </button>
+        ))}
+      </div>
+    </div>
   );
 }
 
+function Confirm({ draft, setDraft, save, saving, notify }: any) {
+  const [openKey, setOpenKey] = useState<string | null>(null);
+  const items: DItem[] = draft.items;
+
+  const patch = (key: string, p: Partial<DItem>) =>
+    setDraft((d: Draft | null) => d && { ...d, items: d.items.map((i) => (i.key === key ? { ...i, ...p } : i)) });
+
+  const remove = (key: string) => {
+    if (items.length <= 1) return setDraft(null);
+    setDraft((d: Draft | null) => d && { ...d, items: d.items.filter((i) => i.key !== key) });
+  };
+
+  const stepOf = (it: DItem) => (it.unit === "g" || it.unit === "ml" ? 10 : 0.5);
+  const setQty = (it: DItem, qty: number) => {
+    if (!(qty > 0)) return;
+    patch(it.key, it.food ? applyCandidate(it, it.food, { qty }) : scaleItem(it, qty));
+  };
+  const setUnit = (it: DItem, unit: string) => {
+    if (!it.food) return;
+    patch(it.key, applyCandidate(it, it.food, { qty: convertQty(it.grams, it.food.portions, unit), unit }));
+  };
+  const pick = (it: DItem, c: Candidate) => {
+    patch(it.key, {
+      ...applyCandidate(it, c),
+      food: c, name: c.name, foodId: c.foodId, confidence: 0.9, estimated: c.source === "ai", err: undefined,
+      candidates: it.candidates?.some((x) => sameFood(x, c)) ? it.candidates : [c, ...(it.candidates ?? [])],
+    });
+    setOpenKey(null);
+  };
+  const deeper = async (it: DItem) => {
+    patch(it.key, { busy: true, err: undefined });
+    try {
+      const c = await estimateFood(it.query ?? it.name, it.qty, it.unit);
+      patch(it.key, {
+        ...applyCandidate(it, c),
+        busy: false, food: c, name: c.name, foodId: null, confidence: 0.5, estimated: true,
+        candidates: [c, ...(it.candidates ?? [])],
+      });
+    } catch (e: any) {
+      patch(it.key, { busy: false, err: e.message ?? "Search failed" });
+    }
+  };
+
+  const total = items.reduce(
+    (a, i) => ({ kcal: a.kcal + i.kcal, protein: a.protein + i.protein, carbs: a.carbs + i.carbs, fat: a.fat + i.fat }),
+    { kcal: 0, protein: 0, carbs: 0, fat: 0 },
+  );
+  const unresolved = items.filter((i) => !i.food && i.foodId == null && i.kcal === 0).length;
+  const anyBusy = items.some((i) => i.busy);
+
+  return (
+    <div className="fixed inset-0 z-30 flex items-end justify-center bg-black/30">
+      <div className="max-h-[90dvh] w-full max-w-md overflow-y-auto rounded-t-[28px] bg-[#fbfdfb] p-5 pb-8 text-[#17231e] shadow-2xl dark:bg-[#17201c] dark:text-[#edf5f0]">
+        <div className="mx-auto h-1 w-10 rounded-full bg-[#d4ddd6]" />
+        <div className="mt-5 flex items-center justify-between">
+          <div>
+            <p className="text-xs font-medium uppercase tracking-widest text-[#32a964]">Ready to log</p>
+            <h2 className="mt-1 text-xl font-semibold">Check your meal</h2>
+          </div>
+          <button onClick={() => setDraft(null)} aria-label="Close"><X size={20} /></button>
+        </div>
+
+        <div className="mt-5 flex gap-2">
+          {["Breakfast", "Lunch", "Dinner", "Snack"].map((t) => (
+            <button
+              key={t}
+              onClick={() => setDraft({ ...draft, mealType: t })}
+              className={`rounded-full px-3 py-2 text-xs ${draft.mealType === t ? "bg-[#1e9b59] text-white" : "bg-[#edf5ee] text-[#607168]"}`}
+            >
+              {t}
+            </button>
+          ))}
+        </div>
+
+        <div className="mt-4 divide-y divide-[#edf1ed]">
+          {items.map((i) => {
+            const notFound = !i.food && i.foodId == null && i.kcal === 0;
+            const ai = i.food?.source === "ai";
+            const units = i.food ? [...new Set([i.unit, "g", ...Object.keys(i.food.portions)])] : null;
+            return (
+              <div key={i.key} className="py-3">
+                <div className="flex items-start justify-between gap-3">
+                  <button
+                    onClick={() => setOpenKey(openKey === i.key ? null : i.key)}
+                    aria-label={`Change food for ${i.name}`}
+                    className="flex min-w-0 items-center gap-1.5 text-left font-medium"
+                  >
+                    <span className="truncate">{i.name}</span>
+                    <ChevronDown size={14} className={`shrink-0 text-[#89968e] transition ${openKey === i.key ? "rotate-180" : ""}`} />
+                  </button>
+                  <div className="flex shrink-0 items-center gap-1">
+                    <span className="text-sm tabular-nums">{i.kcal} kcal</span>
+                    <button onClick={() => remove(i.key)} aria-label={`Remove ${i.name}`} className="grid size-9 place-items-center text-[#b0bbb3]">
+                      <Trash2 size={15} />
+                    </button>
+                  </div>
+                </div>
+
+                {(ai || notFound) && (
+                  <span className="mt-1 inline-block rounded bg-[#fff3d6] px-1.5 py-0.5 text-[10px] text-[#9b7526]">
+                    {notFound ? "not found" : "unverified · AI estimate"}
+                  </span>
+                )}
+
+                {!notFound && (
+                  <div className="mt-2 flex items-center gap-2">
+                    <div className="flex items-center rounded-xl bg-[#f1f7f2] dark:bg-[#223029]">
+                      <button
+                        onClick={() => setQty(i, Math.max(stepOf(i), +(i.qty - stepOf(i)).toFixed(2)))}
+                        disabled={i.qty <= stepOf(i)} aria-label="Decrease quantity"
+                        className="grid size-9 place-items-center text-[#228750] disabled:opacity-40"
+                      >
+                        <Minus size={16} />
+                      </button>
+                      <span className="min-w-12 text-center text-sm font-semibold tabular-nums">{Number(i.qty.toFixed(2))}</span>
+                      <button
+                        onClick={() => setQty(i, +(i.qty + stepOf(i)).toFixed(2))} aria-label="Increase quantity"
+                        className="grid size-9 place-items-center text-[#228750]"
+                      >
+                        <Plus size={16} />
+                      </button>
+                    </div>
+                    {units ? (
+                      <select
+                        value={i.unit} onChange={(e) => setUnit(i, e.target.value)} aria-label="Unit"
+                        className="h-9 rounded-xl border border-[#dce7de] bg-white px-2 text-sm text-[#17231e]"
+                      >
+                        {units.map((u) => <option key={u} value={u}>{u}</option>)}
+                      </select>
+                    ) : (
+                      <span className="text-sm text-[#89968e]">{i.unit}</span>
+                    )}
+                    <span className="text-xs tabular-nums text-[#89968e]">{Math.round(i.grams)} g</span>
+                  </div>
+                )}
+
+                {notFound && (
+                  <div className="mt-2 rounded-xl bg-[#fffaf0] p-3 text-sm text-[#6e603e]">
+                    <p>We couldn&apos;t find this in our food database.</p>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <button
+                        onClick={() => deeper(i)} disabled={i.busy}
+                        className="flex min-h-10 items-center gap-1.5 rounded-xl bg-[#1e9b59] px-3 font-medium text-white disabled:opacity-60"
+                      >
+                        {i.busy ? <Loader2 size={15} className="animate-spin" /> : <Sparkles size={15} />}
+                        {i.busy ? "Searching…" : "Search deeper"}
+                      </button>
+                      <button onClick={() => setOpenKey(i.key)} className="min-h-10 rounded-xl px-3 font-medium text-[#208850]">
+                        Pick a food
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {i.food?.isNew && (
+                  <p className="mt-1 text-[11px] leading-4 text-[#9b7526]">
+                    {i.food.note} {i.food.sources?.length ? `Sources: ${i.food.sources.join(", ")}. ` : ""}
+                    Saved to your foods when you log this meal.
+                  </p>
+                )}
+                {i.err && <p className="mt-2 text-xs text-[#b42318]">{i.err}</p>}
+                {openKey === i.key && <FoodPicker item={i} onPick={(c) => pick(i, c)} notify={notify} />}
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="mt-4 rounded-2xl bg-[#eff8f0] p-4 dark:bg-[#1f2d26]">
+          <div className="flex justify-between font-semibold">
+            <span>Total</span>
+            <span>{total.kcal} kcal</span>
+          </div>
+          <div className="mt-2 text-xs text-[#607168]">
+            P {fmt(total.protein)}g · C {fmt(total.carbs)}g · F {fmt(total.fat)}g
+          </div>
+        </div>
+
+        {unresolved > 0 && (
+          <p className="mt-3 text-xs text-[#9b7526]">
+            {unresolved} item{unresolved > 1 ? "s" : ""} not found. Search deeper, pick a food, or remove {unresolved > 1 ? "them" : "it"} to save.
+          </p>
+        )}
+        <button
+          onClick={save} disabled={saving || unresolved > 0 || anyBusy}
+          className="mt-4 min-h-12 w-full rounded-2xl bg-[#1e9b59] font-semibold text-white shadow-lg shadow-[#1e9b59]/20 disabled:opacity-50"
+        >
+          {saving ? "Saving…" : "Save meal"}
+        </button>
+        <button onClick={() => setDraft(null)} className="mt-2 min-h-11 w-full text-sm font-medium text-[#718078]">
+          Discard
+        </button>
+      </div>
+    </div>
+  );
+}
 function WeightChart({
   points,
   start,

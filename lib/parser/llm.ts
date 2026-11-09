@@ -4,7 +4,7 @@ import { LLMParse, UNITS, MEAL_TYPES } from "@/lib/types";
 // const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY! });
 let ai: GoogleGenAI | null = null;
 
-function getAI() {
+export function getAI() {
   if (!ai) {
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) throw new Error("GEMINI_API_KEY is not set");
@@ -59,3 +59,4 @@ console.log("parseWithLLM",text)
   console.log(JSON.parse(res.text ?? "{}"))
   return LLMParse.parse(JSON.parse(res.text ?? "{}")); // throws if malformed
 }
+

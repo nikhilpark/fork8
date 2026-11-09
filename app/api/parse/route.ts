@@ -12,10 +12,10 @@ const Body = z.object({
 
 export async function POST(req: Request) {
   try {
-    await requireUser();
+    const user = await requireUser();
     const { text, timezone } = Body.parse(await req.json());
     const parsed = await parseWithLLM(text);
-    const items = await Promise.all(parsed.items.map(resolveItem));
+    const items = await Promise.all(parsed.items.map((i) => resolveItem(i, user.id)));
     const mealType = inferMealType(parsed.meal_type, new Date(), timezone);
     return NextResponse.json({ mealType, items });
   } catch (e) {

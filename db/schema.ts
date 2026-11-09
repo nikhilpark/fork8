@@ -35,6 +35,10 @@ export const foods = pgTable("foods", {
   fat100: real("fat_100").notNull(),
   fiber100: real("fiber_100").default(0),
   micros: jsonb("micros").$type<Record<string, number>>().default({}),
+  ownerId: uuid("owner_id"),
+  verified: boolean("verified").default(false),
+  foodState: text("food_state").default("cooked"),
+  sourceId: text("source_id"),
 });
 
 export const foodAliases = pgTable("food_aliases", {
