@@ -355,7 +355,10 @@ function Today({
   ];
   const [working, setWorking] = useState(false);
   const [listening, setListening] = useState(false);
-  const left = Math.max(0, Math.round(targets.kcal - totals.kcal));
+  const left = Math.round(targets.kcal - totals.kcal)
+  const remaining = targets.kcal - totals.kcal;
+const progress = Math.min(100, (totals.kcal / targets.kcal) * 100);
+const exceeded = remaining < 0;
  const run = async (t: string = value) => {
   if (!t.trim() || working) return;
   setWorking(true);
@@ -598,21 +601,37 @@ placeholder={
           </span>
         </div>
         <div className="mt-5 flex items-center gap-6">
-          <div
-            className="grid size-32 shrink-0 place-items-center rounded-full"
-            style={{
-              background: `conic-gradient(#55d783 ${(totals.kcal / targets.kcal) * 360}deg, #315346 0deg)`,
-            }}
-          >
-            <div className="grid size-24 place-items-center rounded-full bg-[#19352a] text-center">
-              <div>
-                <div className="text-2xl font-semibold tabular-nums">
-                  {left}
-                </div>
-                <div className="text-[11px] text-[#b7d1c2]">kcal left</div>
-              </div>
-            </div>
-          </div>
+      <div className="flex shrink-0 flex-col items-center">
+  <div
+    className="grid size-32 place-items-center rounded-full"
+    style={{
+      background: `conic-gradient(
+        ${exceeded ? "#e88b72" : "#55d783"} ${progress * 3.6}deg,
+        #315346 0deg
+      )`,
+    }}
+  >
+    <div className="grid size-24 place-items-center rounded-full bg-[#19352a] text-center">
+      <div>
+        <div className="text-2xl font-semibold tabular-nums">
+          {fmt(totals.kcal)}
+        </div>
+        <div className="text-[10px] text-[#b7d1c2]">
+          kcal consumed
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className={`mt-2 text-xs font-medium ${
+    exceeded ? "text-[#f2a18b]" : "text-[#b7d1c2]"
+  }`}>
+    {exceeded
+      ? `${fmt(Math.abs(remaining))} kcal over`
+      : `${fmt(remaining)} kcal left`}
+  </div>
+</div>
+        
           <div className="grid flex-1 grid-cols-3 gap-3">
             {[
               ["Protein", totals.protein, targets.protein, "#65d99a"],
@@ -640,6 +659,7 @@ placeholder={
             ))}
           </div>
         </div>
+        
       </div>
       <div className="mt-8 flex items-center justify-between">
         <h2 className="text-lg font-semibold">Today&apos;s meals</h2>
