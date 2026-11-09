@@ -1,14 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowUpRight,
   Check,
-  ChevronDown,
   Menu,
   Mic,
-  Play,
   Sparkles,
   X,
 } from "lucide-react";
@@ -27,14 +24,13 @@ function Brand() {
       href="/"
       className="flex items-center gap-2 text-lg font-semibold tracking-tight text-[#183b2b]"
     >
-      <span className="grid size-8 place-items-center rounded-full bg-[#183b2b] text-sm text-[#f6f2e9]">
-        F
+      <span className="grid size-8 place-items-center text-sm text-[#f6f2e9]">
+        <img src="/android-chrome-512x512.png"/>
       </span>
       Fork8
     </Link>
   );
 }
-
 function FoodLogCard() {
   return (
     <div className="relative overflow-hidden rounded-[2rem] border border-[#d7ded2] bg-[#fdfcf8] p-4 shadow-[0_30px_80px_rgba(24,59,43,0.14)] sm:p-6">
@@ -122,27 +118,40 @@ export default function Fork8Landing() {
               </a>
             ))}
           </nav>
-          <div className="hidden items-center gap-4 lg:flex">
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Desktop actions */}
+            <div className="hidden items-center gap-4 lg:flex">
+              <Link
+                href="/app"
+                className="text-sm font-medium text-[#57705e] hover:text-[#183b2b]"
+              >
+                Log in
+              </Link>
+              <Link
+                href="/login?mode=signup"
+                className="rounded-full bg-[#183b2b] px-5 py-2.5 text-sm font-medium text-[#f6f2e9] transition-transform hover:-translate-y-0.5"
+              >
+                Get started <ArrowUpRight className="ml-1 inline size-4" />
+              </Link>
+            </div>
+
+            {/* Always-visible app link on mobile */}
             <Link
               href="/app"
-              className="text-sm font-medium text-[#57705e] hover:text-[#183b2b]"
+              className="rounded-full bg-[#183b2b] px-4 py-2.5 text-xs font-semibold text-[#f6f2e9] transition-transform hover:-translate-y-0.5 sm:text-sm lg:hidden"
             >
-              Sign in
+              Log in <ArrowUpRight className="ml-1 inline size-3.5" />
             </Link>
-            <Link
-              href="/login?mode=signup"
-              className="rounded-full bg-[#183b2b] px-5 py-2.5 text-sm font-medium text-[#f6f2e9] transition-transform hover:-translate-y-0.5"
+
+            <button
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="rounded-full p-2 text-[#183b2b] lg:hidden"
             >
-              Get onboard <ArrowUpRight className="ml-1 inline size-4" />
-            </Link>
+              {menuOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
           </div>
-          <button
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="rounded-full p-2 text-[#183b2b] lg:hidden"
-          >
-            {menuOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
         </div>
         {menuOpen && (
           <div className="border-t border-[#dfe5da] px-5 py-5 lg:hidden">
@@ -153,10 +162,18 @@ export default function Fork8Landing() {
                 </a>
               ))}
               <Link
+                href="/app"
+                onClick={() => setMenuOpen(false)}
+                className="rounded-full border border-[#cfdcc9] px-4 py-3 text-center font-medium text-[#183b2b]"
+              >
+                Log in <ArrowUpRight className="ml-1 inline size-4" />
+              </Link>
+              <Link
                 href="/login?mode=signup"
+                onClick={() => setMenuOpen(false)}
                 className="rounded-full bg-[#183b2b] px-4 py-3 text-center font-medium text-[#f6f2e9]"
               >
-                Get onboard
+                Get started <ArrowUpRight className="ml-1 inline size-4" />
               </Link>
             </div>
           </div>
@@ -181,22 +198,25 @@ export default function Fork8Landing() {
             databases. Just tell Fork8 what you ate. We&apos;ll take care of the
             rest.
           </p>
-          <div className="mt-9 flex flex-wrap items-center gap-4">
+          <div className="mt-9 flex flex-col items-start gap-4">
             <Link
-                href="/login?mode=signup"
-              className="rounded-full bg-[#183b2b] px-6 py-3.5 text-sm font-medium text-[#f6f2e9] transition-transform hover:-translate-y-0.5"
+              href="/login?mode=signup"
+              className="inline-flex items-center rounded-full bg-[#183b2b] px-7 py-4 text-sm font-semibold text-[#f6f2e9] transition-all hover:-translate-y-0.5 hover:bg-[#28543d]"
             >
-              Get onboard <ArrowUpRight className="ml-1 inline size-4" />
+              Start tracking free
+              <ArrowUpRight className="ml-2 size-4" />
             </Link>
-            <a
-              href="#how-it-works"
-              className="flex items-center gap-2 text-sm font-medium text-[#355e46]"
+
+            <Link
+              href="/app"
+              className="group text-sm text-[#718276] transition-colors hover:text-[#183b2b]"
             >
-              Explore Fork8{" "}
-              <span className="grid size-8 place-items-center rounded-full border border-[#b6c8b6]">
-                <Play size={13} fill="currentColor" />
+              Already using Fork8?
+              <span className="ml-1 font-semibold text-[#355e46] group-hover:underline">
+                Log in
               </span>
-            </a>
+              <ArrowUpRight className="ml-1 inline size-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
           </div>
           <div className="mt-10 flex items-center gap-4 text-xs text-[#839286]">
             <div className="flex -space-x-2">
@@ -615,20 +635,21 @@ export default function Fork8Landing() {
         <p className="mx-auto mt-6 max-w-md text-base text-[#6b7b70]">
           Less time tracking. More time making progress.
         </p>
-        <div className="mt-9 flex justify-center gap-4">
+        <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link
-            href="/app"
+            href="/login?mode=signup"
             className="rounded-full bg-[#183b2b] px-6 py-3.5 text-sm font-medium text-[#f6f2e9]"
           >
-            Get started with Fork8{" "}
+            Start tracking free{" "}
             <ArrowUpRight className="ml-1 inline size-4" />
           </Link>
-          <a
-            href="#how-it-works"
-            className="rounded-full border border-[#bdcbbb] px-6 py-3.5 text-sm font-medium text-[#355e46]"
+          <Link
+            href="/app"
+            className="text-sm font-semibold text-[#355e46] hover:underline"
           >
-            Explore features
-          </a>
+            Already using Fork8? Log in
+            <ArrowUpRight className="ml-1 inline size-4" />
+          </Link>
         </div>
       </section>
 
